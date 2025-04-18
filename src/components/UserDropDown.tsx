@@ -9,19 +9,28 @@ import { ChevronDown } from "lucide-react";
 import { GetUserMeResp } from "@/api/get/useGetUserMe";
 import { useState, useRef } from "react";
 import { useLogout } from "@/hooks/useLogout";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export function UserDropdown({ userInfo }: { userInfo: GetUserMeResp }) {
   const handleLogout = useLogout();
   const [open, setOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const isMobile = useIsMobile();
 
   const handleMouseEnter = () => {
+    if (isMobile) return;
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setOpen(true);
   };
 
   const handleMouseLeave = () => {
+    if (isMobile) return;
     timeoutRef.current = setTimeout(() => setOpen(false), 100);
+  };
+
+  const handleToggleClick = () => {
+    if (!isMobile) return;
+    setOpen((prev) => !prev);
   };
 
   return (
@@ -32,7 +41,10 @@ export function UserDropdown({ userInfo }: { userInfo: GetUserMeResp }) {
         className="relative"
       >
         <DropdownMenuTrigger asChild>
-          <div className="group flex flex-row items-center gap-2 cursor-pointer select-none">
+          <div
+            onClick={handleToggleClick}
+            className="group flex flex-row items-center gap-2 cursor-pointer select-none"
+          >
             <Avatar>
               <AvatarImage src={userInfo.profileImage} alt="@avatar" />
             </Avatar>
