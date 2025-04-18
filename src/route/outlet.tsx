@@ -1,6 +1,7 @@
 import { validateAccessToken } from "@/api/client";
 import { useGetUserMe } from "@/api/get/useGetUserMe";
 import { Header } from "@/components/Header";
+import { Loader2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLocation, Navigate, Outlet } from "react-router-dom";
 
@@ -53,7 +54,12 @@ export default function RequireAuth() {
     checkAuth();
   }, []);
 
-  if (loading) return <div>로딩 중...</div>;
+  if (loading)
+    return (
+      <section className="min-w-screen min-h-screen">
+        <Loader2 className="animate-spin" />
+      </section>
+    );
 
   if (!valid) {
     return <Navigate to="/login" state={{ from: location }} replace />;
