@@ -22,7 +22,7 @@ export function Header({ userInfo }: HeaderProps) {
     >
       <NavigationMenuList>
         <NavigationMenuItem>
-          {userInfo && <UserDropdown userInfo={userInfo} onLogout={() => {}} />}
+          {userInfo && <UserDropdown userInfo={userInfo} />}
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>

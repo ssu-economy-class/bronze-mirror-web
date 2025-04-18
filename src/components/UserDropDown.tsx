@@ -8,14 +8,10 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { ChevronDown } from "lucide-react";
 import { GetUserMeResp } from "@/api/get/useGetUserMe";
 import { useState, useRef } from "react";
+import { useLogout } from "@/hooks/useLogout";
 
-export function UserDropdown({
-  userInfo,
-  onLogout,
-}: {
-  userInfo: GetUserMeResp;
-  onLogout: () => void;
-}) {
+export function UserDropdown({ userInfo }: { userInfo: GetUserMeResp }) {
+  const handleLogout = useLogout();
   const [open, setOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -53,7 +49,7 @@ export function UserDropdown({
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <DropdownMenuItem onClick={onLogout} className="cursor-pointer">
+          <DropdownMenuItem onClick={handleLogout} className="cursor-pointer">
             로그아웃
           </DropdownMenuItem>
         </DropdownMenuContent>

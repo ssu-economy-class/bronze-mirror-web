@@ -22,8 +22,7 @@ export const KakaoLoginButton = () => {
 
   const handleLogin = async () => {
     try {
-      const { kakaoId, nickname, profileImage } = await kakaoLogin();
-      console.log("카카오 로그인 성공", { kakaoId, nickname, profileImage });
+      const { kakaoId } = await kakaoLogin();
       mutate(
         {
           kakaoId,
@@ -31,17 +30,15 @@ export const KakaoLoginButton = () => {
         {
           onSuccess: ({ accessToken }) => {
             localStorage.setItem("accessToken", accessToken);
-            console.log("로그인 성공");
-            console.log("accessToken : ", accessToken);
             navigate("/");
           },
-          onError: (error) => {
-            console.error("로그인 실패 : ", error);
+          onError: () => {
+            alert("서버 에러");
           },
         }
       );
     } catch (err) {
-      console.error("카카오 로그인 실패", err);
+      alert("카카오 로그인 실패");
     }
   };
 
