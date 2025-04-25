@@ -9,8 +9,8 @@ import { useIsMobile } from "@/hooks/use-mobile";
 export default function ImmersePage() {
   const {
     imagePreviewUrl,
-    promt,
-    setPromt,
+    prompt,
+    setPrompt,
     isPending,
     handleSubmit,
     dropzoneProps: { getRootProps, getInputProps, isDragActive },
@@ -58,8 +58,8 @@ export default function ImmersePage() {
               id="prompt"
               type="text"
               placeholder="예: 'a woman holding a sword'"
-              value={promt}
-              onChange={(e) => setPromt(e.target.value)}
+              value={prompt}
+              onChange={(e) => setPrompt(e.target.value)}
             />
           </div>
 

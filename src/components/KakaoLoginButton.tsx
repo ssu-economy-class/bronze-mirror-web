@@ -10,12 +10,10 @@ import { useNavigate } from "react-router-dom";
 
 // 카카오로그인 버튼입니다.
 export const KakaoLoginButton = () => {
-  // 카카오 sdk 초기화
   useEffect(() => {
     initKakao();
   }, []);
 
-  // 카카오로그인훅 불러오기
   const { mutate, isPending } = useKakaoLogin();
 
   const navigate = useNavigate();
@@ -30,6 +28,7 @@ export const KakaoLoginButton = () => {
         {
           onSuccess: ({ accessToken }) => {
             localStorage.setItem("accessToken", accessToken);
+            console.log(accessToken);
             navigate("/");
           },
           onError: () => {

@@ -7,7 +7,7 @@ import { usePostPredict } from "@/api/post/usePostPredict";
 export const useImmerseHook = () => {
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
-  const [promt, setPromt] = useState("");
+  const [prompt, setPrompt] = useState("");
   const { mutate: predict, isPending } = usePostPredict();
   const { mutateAsync: uploadFile } = usePostFileUpload();
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ export const useImmerseHook = () => {
   });
 
   const handleSubmit = async () => {
-    if (!imageFile || !promt) {
+    if (!imageFile || !prompt) {
       alert("이미지와 프롬프트를 모두 입력해주세요!");
       return;
     }
@@ -35,7 +35,7 @@ export const useImmerseHook = () => {
       const imageUrl = savedImageUrls[0];
 
       predict(
-        { imageUrl, promt },
+        { imageUrl, prompt },
         {
           onSuccess: (data) => {
             navigate(
@@ -56,8 +56,8 @@ export const useImmerseHook = () => {
 
   return {
     imagePreviewUrl,
-    promt,
-    setPromt,
+    prompt,
+    setPrompt,
     isPending,
     handleSubmit,
     dropzoneProps,
