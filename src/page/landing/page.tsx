@@ -43,17 +43,15 @@ export function LandingPage() {
       >
         <img src="/assets/image/background1.webp" />
         {/* 가로 스크롤 앱 화면 미리보기 */}
-        <div className="overflow-x-auto">
-          <div className="flex space-x-4 w-max px-2">
-            {[1, 2, 3, 4, 5, 6].map((n) => (
-              <img
-                key={n}
-                src={`/assets/screen/screen${n}.webp`}
-                alt={`앱 화면 ${n}`}
-                className="w-52 h-auto rounded-xl shadow-md transition-transform hover:scale-105"
-              />
-            ))}
-          </div>
+        <div className="flex space-x-4 w-auto scroll-auto px-24 py-10 overflow-x-auto">
+          {[1, 2, 3, 4, 5, 6].map((n) => (
+            <img
+              key={n}
+              src={`/assets/screen/screen${n}.webp`}
+              alt={`앱 화면 ${n}`}
+              className="w-52 h-auto rounded-xl shadow-md transition-transform hover:scale-105"
+            />
+          ))}
         </div>
       </motion.section>
       <motion.section
