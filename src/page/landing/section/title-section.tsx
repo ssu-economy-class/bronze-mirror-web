@@ -18,7 +18,7 @@ export default function TitleSection() {
           visible: { opacity: 0.4, scale: 1 },
         }}
         transition={{ duration: 1.5 }}
-        className="max-md:size-28 max-md:left-12 absolute top-1/2 left-48 size-80 rounded-full bg-[#5FA48F] blur-[40px] -translate-y-1/2 z-0"
+        className="max-md:size-20 max-md:left-10 absolute top-1/2 left-48 size-80 rounded-full bg-[#5FA48F] blur-[40px] -translate-y-1/2 z-0"
       />
       {/* 보조 원들 (PC 전용) */}
       <div className="max-md:hidden">
@@ -48,49 +48,51 @@ export default function TitleSection() {
         ))}
       </div>
       {/* 중앙 메인 이미지 */}
-      <motion.img
-        src="/landing/bronze-mirror.webp"
-        alt="청동거울 로고"
-        variants={{
-          hidden: { opacity: 0, rotate: -30 },
-          visible: { opacity: 1, rotate: 0 },
-        }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="max-md:size-28 max-md:left-12 absolute top-1/2 left-48 transform -translate-y-1/2 w-80 h-auto z-10"
-      />
-      {/* 텍스트 */}
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        transition={{ duration: 1.5 }}
-        className="absolute top-1/2 right-1/6 transform -translate-y-1/2 flex flex-col items-start z-10"
-      >
-        <div className="max-md:text-sm text-3xl text-[#BEE0D3] mb-4 max-md:mb-1 flex flex-col items-start">
-          <p>나를 바라보는</p>
-          <div className="flex items-center space-x-2">
-            <p className="mr-8 max-md:mr-3">새로운 시선</p>
-            <div className="max-md:w-20 w-48 h-0.5 bg-[#BEE0D3]" />
+      <div className="flex flex-row gap-64 max-md:gap-8 items-center max-md:left-10 absolute top-1/2 left-48 transform -translate-y-1/2 z-10">
+        <motion.img
+          src="/landing/bronze-mirror.webp"
+          alt="청동거울 로고"
+          variants={{
+            hidden: { opacity: 0, rotate: -30 },
+            visible: { opacity: 1, rotate: 0 },
+          }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="max-md:size-20 w-80 h-auto"
+        />
+        {/* 텍스트 */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 1.5 }}
+          className="flex flex-col items-start z-10"
+        >
+          <div className="max-md:text-[0.6rem] text-3xl text-[#BEE0D3] mb-4 max-md:mb-1 flex flex-col items-start">
+            <p>나를 바라보는</p>
+            <div className="flex items-center space-x-2">
+              <p className="mr-8 max-md:mr-3">새로운 시선</p>
+              <div className="max-md:w-20 w-48 h-0.5 bg-[#BEE0D3]" />
+            </div>
           </div>
-        </div>
 
-        <div className="flex space-x-2">
-          {title.split("").map((char, idx) => (
-            <motion.span
-              key={idx}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ delay: idx * 0.15, duration: 0.5 }}
-              className="text-8xl max-md:text-4xl font-bold text-[#86B9A5] font-hambak tracking-tighter"
-            >
-              {char}
-            </motion.span>
-          ))}
-        </div>
-      </motion.div>
+          <div className="flex space-x-2">
+            {title.split("").map((char, idx) => (
+              <motion.span
+                key={idx}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ delay: idx * 0.15, duration: 0.5 }}
+                className="text-8xl max-md:text-3xl font-bold text-[#86B9A5] font-hambak tracking-tighter"
+              >
+                {char}
+              </motion.span>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </motion.section>
   );
 }
