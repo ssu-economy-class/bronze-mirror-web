@@ -16,7 +16,7 @@ export default function ProfileSection() {
           }}
           transition={{ duration: 1 }}
         >
-          Economy Class.
+          Team. Economy Class
         </motion.p>
         <div className="w-full scrollbar-hide overflow-x-auto px-6 mb-8">
           <div className="flex gap-6 w-max">
@@ -54,9 +54,9 @@ export default function ProfileSection() {
         }}
         transition={{ duration: 1 }}
       >
-        Economy Class.
+        Team. Economy Class
       </motion.p>
-      <div className="bg-[#5FA48F] h-[55vh] w-screen rounded-tr-xl rounded-tl-xl flex items-center justify-center gap-8">
+      <div className="bg-[#5FA48F] h-[55vh] w-screen flex items-center justify-center gap-8">
         <ProfileCard
           name="박가을"
           profileImg="/landing/profile/park.png"
