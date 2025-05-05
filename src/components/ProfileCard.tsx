@@ -37,7 +37,7 @@ export default function ProfileCard({
         <div className="flex flex-col items-center mt-3 text-center">
           <p className="text-[1.1rem] font-bold text-[#0E4838]">{name}</p>
           <p className="text-[0.8rem] font-semibold text-[#588F80]">{part}</p>
-          <p className="text-[0.7rem] font-normal mt-4 text-[#A0BCB1]">
+          <p className="text-[0.7rem] font-normal mt-4 text-[#5FA48F]">
             {email}
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function ProfileCard({
       <div className="flex flex-col items-center mt-6 text-center">
         <p className="text-xl font-bold text-[#0E4838]">{name}</p>
         <p className="text-md font-semibold text-[#588F80]">{part}</p>
-        <p className="text-sm font-normal mt-4 text-[#A0BCB1]">{email}</p>
+        <p className="text-sm font-normal mt-4 text-[#5FA48F]">{email}</p>
       </div>
     </div>
   );
