@@ -7,7 +7,6 @@ import ProfileSection from "./section/profile-section";
 import TitleSection from "./section/title-section";
 import BlurSection from "./section/blur-section";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Link } from "react-router-dom";
 
 export function LandingPage() {
   const isMobile = useIsMobile();
