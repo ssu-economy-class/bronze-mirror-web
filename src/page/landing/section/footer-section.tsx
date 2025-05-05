@@ -50,6 +50,29 @@ export default function FooterSection() {
       <div className="px-6 font-bold text-xl max-md:text-sm">
         지도교수 고일주
       </div>
+
+      <div className="px-6 flex flex-col items-start">
+        <p>일시 : 25.05.23-25, 10:00~17:00</p>
+        <div>
+          <span>장소 : </span>
+          <a
+            className="text-md max-md:text-sm underline"
+            href="https://naver.me/FeXRTU5Q"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            인사동길 35-6, 마루아트센터 특별관(B1)
+          </a>
+        </div>
+        <a
+          className="text-md max-md:text-sm underline"
+          href="https://afterglow2025.github.io/afterglow2025/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Afterglow 바로가기
+        </a>
+      </div>
       <div className="absolute bottom-8 right-3 flex max-md:gap-2 gap-4">
         <Button
           onClick={() => {
