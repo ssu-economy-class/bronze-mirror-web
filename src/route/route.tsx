@@ -12,12 +12,11 @@ export default function MainRouter() {
     <Routes>
       <Route path="/landing" element={<LandingPage />} />
       {/* 인증하지 않아도 되는 페이지 */}
-      <Route element={<Layout />}>
-        <Route path="/login" element={<LoginPage />} />
-      </Route>
+      <Route element={<Layout />}></Route>
       {/* 인증해야 접근할 수 있는 페이지 */}
       <Route element={<RequireAuth />}>
         <Route element={<Layout />}>
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/user" element={<UserPage />} />
           <Route path="/immerse" element={<ImmersePage />} />

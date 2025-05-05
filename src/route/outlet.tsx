@@ -62,7 +62,7 @@ export default function RequireAuth() {
     );
 
   if (!valid) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return <Navigate to="/landing" state={{ from: location }} replace />;
   }
 
   return <Outlet />;
