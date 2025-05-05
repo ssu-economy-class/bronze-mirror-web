@@ -24,12 +24,12 @@ export default function ExampleSection() {
       viewport={{ once: true, amount: 0.4 }}
       variants={{ hidden: {}, visible: {} }}
     >
-      <div className="bg-[#5FA48F] w-screen h-4/5 flex flex-row gap-4 items-center justify-start">
+      <div className="bg-[#5FA48F] w-screen h-4/5 flex flex-row gap-4 max-md:gap-2 items-center justify-center">
         <div className="flex flex-col gap-8 max-md:gap-3">
           <motion.p className="text-end max-xl:text-[2rem] max-md:text-[1rem] text-6xl font-playfair text-[#0E4838]">
             How to Experience.
           </motion.p>
-          <motion.div className="max-md:gap-1 max-xl:text-[1rem] max-md:text-[0.5rem] flex flex-col items-end gap-4.5 text-2xl">
+          <motion.div className="max-md:gap-1 max-xl:text-[1rem] max-md:text-[0.7rem] flex flex-col items-end gap-4.5 text-2xl">
             <p>drawing directly</p>
             <p>submitting sketch</p>
             <p>transforming into character</p>

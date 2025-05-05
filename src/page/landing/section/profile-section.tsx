@@ -9,14 +9,14 @@ export default function ProfileSection() {
     return (
       <section className="w-screen flex flex-col items-center gap-4">
         <motion.p
-          className="mt-8 text-md font-playfair text-[#0E4838]"
+          className="max-md:text-[1.2rem] text-4xl mt-8 text-md font-playfair text-[#0E4838]"
           variants={{
             hidden: { opacity: 0, y: -20 },
             visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 1 }}
         >
-          Crew.
+          Team. Economy Class.
         </motion.p>
         <div className="w-full scrollbar-hide overflow-x-auto px-6 mb-8">
           <div className="flex gap-6 w-max">
@@ -47,14 +47,14 @@ export default function ProfileSection() {
   return (
     <section className="w-screen h-[60vh] flex flex-col items-center">
       <motion.p
-        className="mt-8 text-4xl font-playfair text-[#0E4838]"
+        className="mb-3 mt-8 text-4xl font-playfair text-[#0E4838]"
         variants={{
           hidden: { opacity: 0, y: -20 },
           visible: { opacity: 1, y: 0 },
         }}
         transition={{ duration: 1 }}
       >
-        Crew.
+        Team. Economy Class.
       </motion.p>
       <div className="bg-[#5FA48F] h-[55vh] w-screen rounded-tr-xl rounded-tl-xl flex items-center justify-center gap-8">
         <ProfileCard

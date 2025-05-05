@@ -16,7 +16,7 @@ export default function FeatureSection() {
       <div className="relative flex flex-col items-center justify-start max-md:gap-8 gap-16 z-10">
         {/* Title */}
         <motion.p
-          className="max-md:mt-3 max-md:text-sm mt-16 text-4xl font-playfair text-[#0E4838]"
+          className="max-md:mt-3 max-md:text-[1.2rem] mt-16 text-4xl font-playfair text-[#0E4838]"
           variants={{
             hidden: { opacity: 0, y: -20 },
             visible: { opacity: 1, y: 0 },

@@ -17,7 +17,7 @@ export default function ProfileCard({
   const isMobile = useIsMobile();
   if (isMobile) {
     return (
-      <div className="bg-[#E1F0EA] min-w-[10rem] min-h-[16rem] rounded-xl flex flex-col items-center justify-center shadow-md">
+      <div className="bg-[#B9DED1] min-w-[10rem] min-h-[16rem] rounded-xl flex flex-col items-center justify-center shadow-md">
         <div className="relative size-20 flex items-center justify-center">
           <img
             src="/landing/mirror-frame.webp"
@@ -46,7 +46,7 @@ export default function ProfileCard({
   }
 
   return (
-    <div className="bg-[#E1F0EA] min-w-[14rem] min-h-[20rem] rounded-xl flex flex-col items-center justify-center shadow-md">
+    <div className="bg-[#B9DED1] min-w-[14rem] min-h-[20rem] rounded-xl flex flex-col items-center justify-center shadow-md">
       <div className="relative size-32">
         <img
           src="/landing/mirror-frame.webp"
