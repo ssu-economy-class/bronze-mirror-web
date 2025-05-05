@@ -11,7 +11,6 @@ export default function TitleSection() {
       variants={{ hidden: {}, visible: {} }}
       className="relative h-screen max-md:h-1/3 w-screen aspect-video bg-gradient-to-b from-[#03433A] to-[#021B17] overflow-hidden"
     >
-      {/* 블러 효과 원 */}
       <motion.div
         variants={{
           hidden: { opacity: 0, scale: 0 },
@@ -20,7 +19,6 @@ export default function TitleSection() {
         transition={{ duration: 1.5 }}
         className="max-md:size-20 max-md:left-10 absolute top-1/2 left-48 size-80 rounded-full bg-[#5FA48F] blur-[40px] -translate-y-1/2 z-0"
       />
-      {/* 보조 원들 (PC 전용) */}
       <div className="">
         {[
           {
@@ -30,7 +28,7 @@ export default function TitleSection() {
           },
           {
             className:
-              "max-md:top-2 max-md:left-32 max-md:size-18 top-10 left-[42%] size-36 blur-[1px]",
+              "max-md:top-2 max-md:left-32 max-md:size-14 top-10 left-[42%] size-36 blur-[1px]",
             delay: 0.4,
           },
           {
@@ -57,7 +55,6 @@ export default function TitleSection() {
           />
         ))}
       </div>
-      {/* 중앙 메인 이미지 */}
       <div className="flex flex-row gap-64 max-md:gap-8 items-center max-md:left-10 absolute top-1/2 left-48 transform -translate-y-1/2 z-10">
         <motion.img
           src="/landing/bronze-mirror.webp"
