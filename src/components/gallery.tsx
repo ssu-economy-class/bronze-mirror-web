@@ -117,12 +117,11 @@ export default function HorizontalGallery() {
               src={src}
               alt={`앱 화면 ${origIdx + 1}`}
               style={{ width: ITEM_WIDTH }}
-              className="h-auto shrink-0 rounded-lg shadow-md object-cover"
+              className="py-8 h-auto rounded-lg object-contain"
               animate={{
                 x: 0,
                 opacity: isFocused ? 1 : 0.5,
                 scale: isFocused ? 1.1 : 1,
-                borderRadius: isFocused ? "16px" : "8px",
               }}
               transition={{ type: "tween", duration: 0.3 }}
             />

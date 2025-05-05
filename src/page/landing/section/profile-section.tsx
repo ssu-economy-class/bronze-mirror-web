@@ -7,7 +7,7 @@ export default function ProfileSection() {
 
   if (isMobile) {
     return (
-      <section className="mt-8 w-screen flex flex-col items-center gap-4">
+      <section className="mt-4 w-screen flex flex-col items-center gap-4">
         <motion.p
           className="max-md:text-[1.2rem] text-4xl mt-8 text-md font-playfair text-[#0E4838]"
           variants={{
@@ -45,9 +45,9 @@ export default function ProfileSection() {
   }
 
   return (
-    <section className="mt-32 w-screen h-[60vh] flex flex-col items-center">
+    <section className="w-screen h-[60vh] flex flex-col items-center">
       <motion.p
-        className="mb-3 mt-8 text-4xl font-playfair font-semibold text-[#0E4838]"
+        className="mb-3 mt-16 text-4xl font-playfair font-semibold text-[#0E4838]"
         variants={{
           hidden: { opacity: 0, y: -20 },
           visible: { opacity: 1, y: 0 },
