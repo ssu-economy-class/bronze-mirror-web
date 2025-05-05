@@ -27,7 +27,7 @@ export default function ProfileCard({
           <Avatar className="size-19 absolute z-0">
             <AvatarImage
               src={profileImg}
-              className="object-cover object-[center_20%] w-full h-full"
+              className="object-cover w-full h-full"
             />
             <AvatarFallback className="bg-[#87D9B9] opacity-80 blur-xl text-white font-bold">
               {name[0]}
@@ -56,7 +56,7 @@ export default function ProfileCard({
         <Avatar className="size-28 absolute top-2 left-2 z-0">
           <AvatarImage
             src={profileImg}
-            className="object-cover object-[center_20%] w-full h-full"
+            className="object-cover w-full h-full"
           />
           <AvatarFallback className="bg-[#87D9B9] opacity-80 blur-xl text-white font-bold">
             {name[0]}

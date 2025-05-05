@@ -56,7 +56,7 @@ export default function ProfileSection() {
       >
         Team. Economy Class
       </motion.p>
-      <div className="bg-[#5FA48F] h-[55vh] w-screen flex items-center justify-center gap-8">
+      <div className="bg-[#0E4838] h-[55vh] w-screen flex items-center justify-center gap-8">
         <ProfileCard
           name="박가을"
           profileImg="/landing/profile/park.png"
