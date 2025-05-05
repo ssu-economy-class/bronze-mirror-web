@@ -21,18 +21,28 @@ export default function TitleSection() {
         className="max-md:size-20 max-md:left-10 absolute top-1/2 left-48 size-80 rounded-full bg-[#5FA48F] blur-[40px] -translate-y-1/2 z-0"
       />
       {/* 보조 원들 (PC 전용) */}
-      <div className="max-md:hidden">
+      <div className="">
         {[
           {
-            className: "bottom-[-5rem] left-[-5rem] size-40 blur-[3px]",
+            className:
+              "max-md:-bottom-8 max-md:-left-8 max-md:size-20 bottom-[-5rem] left-[-5rem] size-40 blur-[3px]",
             delay: 0.3,
           },
-          { className: "top-10 left-[42%] size-36 blur-[1px]", delay: 0.4 },
           {
-            className: "top-12 right-[-5rem] size-60 blur-[3.5px]",
+            className:
+              "max-md:top-2 max-md:left-32 max-md:size-18 top-10 left-[42%] size-36 blur-[1px]",
+            delay: 0.4,
+          },
+          {
+            className:
+              "max-md:top-3 max-md:-right-4 max-md:size-20 top-12 right-[-5rem] size-60 blur-[3.5px]",
             delay: 0.5,
           },
-          { className: "bottom-10 right-[26%] size-32 blur-[2px]", delay: 0.6 },
+          {
+            className:
+              "max-md:bottom-2 max-md:right-[30%] max-md:size-15 bottom-10 right-[26%] size-32 blur-[2px]",
+            delay: 0.6,
+          },
         ].map((item, idx) => (
           <motion.img
             key={idx}
