@@ -16,7 +16,7 @@ export default function ProfileSection() {
           }}
           transition={{ duration: 1 }}
         >
-          Team. Economy Class.
+          Economy Class.
         </motion.p>
         <div className="w-full scrollbar-hide overflow-x-auto px-6 mb-8">
           <div className="flex gap-6 w-max">
@@ -47,14 +47,14 @@ export default function ProfileSection() {
   return (
     <section className="mt-32 w-screen h-[60vh] flex flex-col items-center">
       <motion.p
-        className="mb-3 mt-8 text-4xl font-semibold text-[#0E4838]"
+        className="mb-3 mt-8 text-4xl font-playfair font-semibold text-[#0E4838]"
         variants={{
           hidden: { opacity: 0, y: -20 },
           visible: { opacity: 1, y: 0 },
         }}
         transition={{ duration: 1 }}
       >
-        Team. 이코노미클래스
+        Economy Class.
       </motion.p>
       <div className="bg-[#5FA48F] h-[55vh] w-screen rounded-tr-xl rounded-tl-xl flex items-center justify-center gap-8">
         <ProfileCard
