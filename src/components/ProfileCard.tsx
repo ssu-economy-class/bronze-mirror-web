@@ -1,13 +1,19 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 interface ProfileCardProps {
   name: string;
   part: string;
   email: string;
+  profileImg: string;
 }
 
-export default function ProfileCard({ name, part, email }: ProfileCardProps) {
+export default function ProfileCard({
+  name,
+  part,
+  email,
+  profileImg,
+}: ProfileCardProps) {
   const isMobile = useIsMobile();
   if (isMobile) {
     return (
@@ -19,6 +25,10 @@ export default function ProfileCard({ name, part, email }: ProfileCardProps) {
             className="absolute inset-0 w-full h-full object-cover rounded-full z-10"
           />
           <Avatar className="size-19 absolute z-0">
+            <AvatarImage
+              src={profileImg}
+              className="object-cover object-[center_20%] w-full h-full"
+            />
             <AvatarFallback className="bg-[#87D9B9] opacity-80 blur-xl text-white font-bold">
               {name[0]}
             </AvatarFallback>
@@ -37,13 +47,17 @@ export default function ProfileCard({ name, part, email }: ProfileCardProps) {
 
   return (
     <div className="bg-[#E1F0EA] min-w-[14rem] min-h-[20rem] rounded-xl flex flex-col items-center justify-center shadow-md">
-      <div className="relative w-28 h-28">
+      <div className="relative size-32">
         <img
           src="/landing/mirror-frame.webp"
           alt="mirror frame"
           className="absolute inset-0 w-full h-full object-cover rounded-full z-10"
         />
-        <Avatar className="w-24 h-24 absolute top-2 left-2 z-0">
+        <Avatar className="size-28 absolute top-2 left-2 z-0">
+          <AvatarImage
+            src={profileImg}
+            className="object-cover object-[center_20%] w-full h-full"
+          />
           <AvatarFallback className="bg-[#87D9B9] opacity-80 blur-xl text-white font-bold">
             {name[0]}
           </AvatarFallback>

@@ -22,16 +22,19 @@ export default function ProfileSection() {
           <div className="flex gap-6 w-max">
             <ProfileCard
               name="박가을"
+              profileImg="/landing/profile/park.png"
               part="Design"
               email="gaeul703@gmail.com"
             />
             <ProfileCard
               name="문세종"
+              profileImg="/landing/profile/moon.png"
               part="Front-end"
               email="jongse@soongsil.ac.kr"
             />
             <ProfileCard
               name="한석휘"
+              profileImg="/landing/profile/han.png"
               part="Back-end"
               email="ka1679@soongsil.ac.kr"
             />
@@ -54,14 +57,21 @@ export default function ProfileSection() {
         Crew.
       </motion.p>
       <div className="bg-[#5FA48F] h-[55vh] w-screen rounded-tr-xl rounded-tl-xl flex items-center justify-center gap-8">
-        <ProfileCard name="박가을" part="Design" email="gaeul703@gmail.com" />
+        <ProfileCard
+          name="박가을"
+          profileImg="/landing/profile/park.png"
+          part="Design"
+          email="gaeul703@gmail.com"
+        />
         <ProfileCard
           name="문세종"
+          profileImg="/landing/profile/moon.png"
           part="Front-end"
           email="jongse@soongsil.ac.kr"
         />
         <ProfileCard
           name="한석휘"
+          profileImg="/landing/profile/han.png"
           part="Back-end"
           email="ka1679@soongsil.ac.kr"
         />

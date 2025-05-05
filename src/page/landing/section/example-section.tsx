@@ -24,7 +24,7 @@ export default function ExampleSection() {
       viewport={{ once: true, amount: 0.4 }}
       variants={{ hidden: {}, visible: {} }}
     >
-      <div className="bg-[#5FA48F] w-screen h-4/5 flex flex-row gap-4 items-center justify-center">
+      <div className="bg-[#5FA48F] w-screen h-4/5 flex flex-row gap-4 items-center justify-start">
         <div className="flex flex-col gap-8 max-md:gap-3">
           <motion.p className="text-end max-xl:text-[2rem] max-md:text-[1rem] text-6xl font-playfair text-[#0E4838]">
             How to Experience.
@@ -35,12 +35,12 @@ export default function ExampleSection() {
             <p>transforming into character</p>
           </motion.div>
         </div>
-        <div className="max-md:top-28 flex flex-row gap-8 max-md:gap-2">
+        <div className="max-md:top-28 flex flex-row gap-8 max-md:gap-1">
           <motion.img
             ref={drawRef}
             src="/landing/drawing-example.webp"
             alt="drawing"
-            className="z-10 w-120 max-2xl:w-80 max-xl:w-60 max-md:w-28"
+            className="z-10 w-120 max-2xl:w-80 max-xl:w-60 max-md:w-24"
           />
 
           {isDrawInView && (
@@ -48,7 +48,7 @@ export default function ExampleSection() {
               key={animationKey}
               src="/landing/result-example.webp"
               alt="result"
-              className="w-120 z-20 max-2xl:w-80 max-xl:w-60 max-md:w-28"
+              className="w-120 z-20 max-2xl:w-80 max-xl:w-60 max-md:w-24"
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
