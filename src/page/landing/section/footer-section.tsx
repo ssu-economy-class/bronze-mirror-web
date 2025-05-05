@@ -10,7 +10,6 @@ export default function FooterSection() {
   };
   return (
     <footer className="relative w-full max-md:py-4 py-12 text-black text-sm leading-relaxed space-y-6">
-      {/* 팀명 및 서비스 소개 */}
       <div className="px-6 ">
         <p className="text-4xl max-md:text-2xl font-bold inline-block mr-2">
           청동거울
@@ -22,8 +21,6 @@ export default function FooterSection() {
           Android Application
         </div>
       </div>
-
-      {/* 서비스 설명 */}
       <p className="text-xl max-md:text-sm px-6 ">
         사용자의 얼굴 사진을 기반으로 그림을 그리고, 이를 AI의 도움으로 더 나은
         캐릭터로 재창조하고 공유하는 앱을 제작했습니다. 생성된 캐릭터는
@@ -31,21 +28,20 @@ export default function FooterSection() {
         경험을 제공합니다.
       </p>
       <div className="w-full h-[0.05rem] bg-black" />
-      {/* 팀원 */}
       <div className="px-6 space-y-1 text-xl flex flex-col max-md:text-sm">
         <div>
           <span className="font-bold">박가을</span>{" "}
-          <span className="ml-2">Kim Minseo</span>{" "}
+          <span className="ml-2">Park Gaeul </span>{" "}
           <span className="ml-2">디자인, 팀장</span>
         </div>
         <div>
           <span className="font-bold">문세종</span>{" "}
-          <span className="ml-2">Choi Jiwon</span>{" "}
+          <span className="ml-2">Moon Sejong</span>{" "}
           <span className="ml-2">프론트엔드 개발, 기획</span>
         </div>
         <div>
           <span className="font-bold">한석휘</span>{" "}
-          <span className="ml-2">Shin Wooyean</span>{" "}
+          <span className="ml-2">Han Seokhwi</span>{" "}
           <span className="ml-2">백엔드 개발, AI</span>
         </div>
       </div>

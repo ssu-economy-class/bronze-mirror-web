@@ -3,6 +3,7 @@ import ConceptSection from "./section/concept-section";
 import ExampleSection from "./section/example-section";
 import FeatureSection from "./section/feature-section";
 import FooterSection from "./section/footer-section";
+import PreviewSection from "./section/preview-section";
 import ProfileSection from "./section/profile-section";
 import TitleSection from "./section/title-section";
 
@@ -14,7 +15,7 @@ export function LandingPage() {
       <BlurSection />
       <FeatureSection />
       <ExampleSection />
-      <img src="landing/preview-section.webp" />
+      <PreviewSection />
       <ProfileSection />
       <FooterSection />
     </main>
