@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { Github } from "lucide-react";
 
 export default function FooterSection() {
@@ -51,12 +52,14 @@ export default function FooterSection() {
         지도교수 고일주
       </div>
 
-      <div className="px-6 flex flex-col items-start">
+      <div className="px-6 flex flex-col items-start max-md:text-[0.7rem]">
+        <Separator className="max-md:my-2 my-8" />
+        <p className="font-semibold">Info.</p>
         <p>일시 : 25.05.23-25, 10:00~17:00</p>
         <div>
           <span>장소 : </span>
           <a
-            className="text-md max-md:text-sm underline"
+            className="text-md max-md:text-[0.7rem] underline"
             href="https://naver.me/FeXRTU5Q"
             target="_blank"
             rel="noopener noreferrer"
@@ -65,7 +68,7 @@ export default function FooterSection() {
           </a>
         </div>
         <a
-          className="text-md max-md:text-sm underline"
+          className="text-md max-md:text-[0.7rem] underline"
           href="https://afterglow2025.github.io/afterglow2025/"
           target="_blank"
           rel="noopener noreferrer"
