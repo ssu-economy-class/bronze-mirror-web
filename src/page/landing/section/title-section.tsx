@@ -1,7 +1,24 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function TitleSection() {
   const title = "청동거울";
+  const [clickCount, setClickCount] = useState(0);
+
+  const handleLogoClick = () => {
+    setClickCount((prev) => {
+      const newCount = prev + 1;
+      console.log("Click count:", clickCount);
+      if (newCount === 3) {
+        window.open(
+          "https://docs.google.com/forms/d/e/1FAIpQLSenjP9JM9is2Vi18Lex_RkBpSha8QR7c0TQdLS68nX-bD9xuQ/viewform",
+          "_blank"
+        );
+        return 0;
+      }
+      return newCount;
+    });
+  };
 
   return (
     <motion.section
@@ -58,6 +75,7 @@ export default function TitleSection() {
       <div className="flex flex-row gap-64 max-md:gap-8 items-center max-md:left-10 absolute top-1/2 left-48 transform -translate-y-1/2 z-10">
         <motion.img
           src="/landing/bronze-mirror.webp"
+          onClick={handleLogoClick}
           alt="청동거울 로고"
           variants={{
             hidden: { opacity: 0, rotate: -30 },
