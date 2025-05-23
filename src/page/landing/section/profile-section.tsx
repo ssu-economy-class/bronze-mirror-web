@@ -7,7 +7,7 @@ export default function ProfileSection() {
 
   if (isMobile) {
     return (
-      <section className="mt-4 w-screen flex flex-col items-center gap-4">
+      <section className="flex flex-col items-center w-screen gap-4 mt-4">
         <motion.p
           className="max-md:text-[1.2rem] text-4xl mt-8 text-md font-playfair text-[#0E4838]"
           variants={{
@@ -18,7 +18,7 @@ export default function ProfileSection() {
         >
           Team. Economy Class
         </motion.p>
-        <div className="w-full scrollbar-hide overflow-x-auto px-6 mb-8">
+        <div className="w-full px-6 mb-8 overflow-x-auto scrollbar-hide">
           <div className="flex gap-6 w-max">
             <ProfileCard
               name="박가을"
@@ -45,7 +45,7 @@ export default function ProfileSection() {
   }
 
   return (
-    <section className="w-screen h-[60vh] flex flex-col items-center">
+    <section className="flex flex-col items-center w-screen h-screen">
       <motion.p
         className="mb-3 mt-16 text-4xl font-playfair font-semibold text-[#0E4838]"
         variants={{
@@ -56,7 +56,7 @@ export default function ProfileSection() {
       >
         Team. Economy Class
       </motion.p>
-      <div className="bg-[#0E4838] h-[55vh] w-screen flex items-center justify-center gap-8">
+      <div className="bg-[#0E4838] h-[60vh] p-12 w-screen flex items-center justify-center gap-8">
         <ProfileCard
           name="박가을"
           profileImg="/landing/profile/park.png"
