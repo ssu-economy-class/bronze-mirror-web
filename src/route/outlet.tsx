@@ -18,7 +18,7 @@ export function Layout() {
   }
 
   return (
-    <main className="grow flex min-h-screen flex-col bg-white items-start justify-start">
+    <main className="flex flex-col items-start justify-start min-h-screen bg-white grow">
       <Header userInfo={data} />
       <Outlet />
     </main>
@@ -56,13 +56,13 @@ export default function RequireAuth() {
 
   if (loading)
     return (
-      <section className="min-w-screen min-h-screen">
+      <section className="min-h-screen min-w-screen">
         <Loader2 className="animate-spin" />
       </section>
     );
 
   if (!valid) {
-    return <Navigate to="/landing" state={{ from: location }} replace />;
+    return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
   return <Outlet />;
